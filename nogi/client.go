@@ -31,7 +31,7 @@ type Client interface {
 
 const (
 	baseURL       = "www.nogizaka46.com"
-	apiBasePath   = baseURL + "s/n46/api/list"
+	apiBasePath   = "s/n46/api/list"
 	protocolHTTP  = "http"
 	protocolHTTPS = "https"
 )
