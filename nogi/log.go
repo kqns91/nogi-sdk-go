@@ -20,34 +20,18 @@ func newNilLogger() Logger {
 	return &nilLogger{}
 }
 
-func (l *nilLogger) Debug(msg string, args ...any) {
-	return
-}
+func (l *nilLogger) Debug(msg string, args ...any) {}
 
-func (l *nilLogger) DebugCtx(ctx context.Context, msg string, args ...any) {
-	return
-}
+func (l *nilLogger) DebugCtx(ctx context.Context, msg string, args ...any) {}
 
-func (l *nilLogger) Info(msg string, args ...any) {
-	return
-}
+func (l *nilLogger) Info(msg string, args ...any) {}
 
-func (l *nilLogger) InfoCtx(ctx context.Context, msg string, args ...any) {
-	return
-}
+func (l *nilLogger) InfoCtx(ctx context.Context, msg string, args ...any) {}
 
-func (l *nilLogger) Warn(msg string, args ...any) {
-	return
-}
+func (l *nilLogger) Warn(msg string, args ...any) {}
 
-func (l *nilLogger) WarnCtx(ctx context.Context, msg string, args ...any) {
-	return
-}
+func (l *nilLogger) WarnCtx(ctx context.Context, msg string, args ...any) {}
 
-func (l *nilLogger) Error(msg string, args ...any) {
-	return
-}
+func (l *nilLogger) Error(msg string, args ...any) {}
 
-func (l *nilLogger) ErrorCtx(ctx context.Context, msg string, args ...any) {
-	return
-}
+func (l *nilLogger) ErrorCtx(ctx context.Context, msg string, args ...any) {}
