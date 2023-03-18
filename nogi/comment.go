@@ -8,6 +8,7 @@ import (
 	"net/url"
 	"regexp"
 	"strconv"
+	"time"
 
 	"github.com/kqns91/nogi-sdk-go/nogi/model"
 )
@@ -83,6 +84,9 @@ func (c *client) GetAllComments(ctx context.Context, blogID string) ([]*model.Co
 		if count <= len(result) {
 			break
 		}
+
+		// 負荷をかけないようにスリープ。
+		time.Sleep(300 * time.Millisecond)
 	}
 
 	return result, nil
