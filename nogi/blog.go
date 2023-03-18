@@ -8,6 +8,7 @@ import (
 	"net/url"
 	"regexp"
 	"strconv"
+	"time"
 
 	"github.com/kqns91/nogi-sdk-go/nogi/model"
 )
@@ -93,6 +94,9 @@ func (c *client) GetAllBlogs(ctx context.Context) ([]*model.Blog, error) {
 		if count <= len(result) {
 			break
 		}
+
+		// 負荷をかけないようにスリープ。
+		time.Sleep(300 * time.Millisecond)
 	}
 
 	return result, nil
